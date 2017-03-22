@@ -1,9 +1,9 @@
-#OWL ITEM MANAGER
+# OWL ITEM MANAGER
 
-[LEIAME.md](Leia em português)
+[Leia em português](LEIAME.md)
 
 This plugin is dedicated to item management (delete, store and restore) in
-[https://github.com/OwlCarousel2/OwlCarousel2](owlcarousel2).
+[owlcarousel2](https://github.com/OwlCarousel2/OwlCarousel2).
 
 ## Why?
 

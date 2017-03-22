@@ -1,7 +1,7 @@
 #OWL ITEM MANAGER
 
 Este plugin é dedicado a manipulação de itens (deleção, armazenamento e restaruação) no
-[https://github.com/OwlCarousel2/OwlCarousel2](owlcarousel2).
+[owlcarousel2](https://github.com/OwlCarousel2/OwlCarousel2).
 
 ## Porque? (casos de uso)
 
