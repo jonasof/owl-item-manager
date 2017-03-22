@@ -2,22 +2,21 @@
 
 [Leia em português](LEIAME.md)
 
-This plugin is dedicated to item management (delete, store and restore) in
+This plugin is dedicated to item management (remove, store and restore) in
 [owlcarousel2](https://github.com/OwlCarousel2/OwlCarousel2).
 
 ## Why?
 
-This plugin was created by the need to filter items in carousel.
-
 By default, the owlcarousel2 has a limited range of operations available
-to add, remove and restore items.
+to add, remove and restore items, what makes harder to realize tasks like filter
+the carousel items.
 
-Imagine this situation: there is a carousel With many fruit photos, and you
+For example, imagine that there is a carousel With many fruit photos, and you
 want to press the button to view only apples. With this plugin you just
 need to add one apple class to each item and execute
-owlCarousel.trigger(deleteByNotHavingSelector.owl.carousel, ".apple")
-(see below). The methods 'collect.owl.carousel' and
-'restoreCollection.owl.carousel' allow to store and restore all fruit
+owlCarousel.trigger(removeByNotHavingSelector.owl.carousel, ".apple")
+to remove all items that are not apples, while the methods 'collect.owl.carousel'
+and 'restoreCollection.owl.carousel' store and restore all fruit
 photos without need to reload the page.
 
 ## Installation
@@ -33,24 +32,24 @@ owlCarousel = $(".owl-carousel").owlCarousel({
 
 ## Use
 
-For example, we collect items to memory, delete all the items and restore they:
+For example, we collect items to memory, remove all the items and restore they:
 
 ```
 owlCarousel = $(".owl-carousel").owlCarousel();
 
 owlCarousel.trigger('collect.owl.carousel');
-owlCarousel.trigger('deleteall.owl.carousel');
+owlCarousel.trigger('removeall.owl.carousel');
 owlCarousel.trigger('restoreCollection.owl.carousel');
 ```
 
-We can also delete items by they selector.
+We can also remove items by they selector.
 
 ```
-owlCarousel.trigger('deleteBySelector.owl.carousel', ".to_delete");
+owlCarousel.trigger('removeBySelector.owl.carousel', ".to_delete");
 ```
 
 Or only the items that don't have the selector
 
 ```
-owlCarousel.trigger('deleteByNotHavingSelector.owl.carousel', ".to_delete");
+owlCarousel.trigger('removeByNotHavingSelector.owl.carousel', ".to_delete");
 ```

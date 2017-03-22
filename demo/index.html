@@ -37,14 +37,14 @@
         function RestoreCollection() {
             owlCarousel.trigger("restoreCollection.owl.carousel");
         }
-        function DeleteAll() {
+        function RemoveAll() {
             owlCarousel.trigger("removeAll.owl.carousel");
         }
-        function deleteBySelector() {
-            owlCarousel.trigger("removeBySelector.owl.carousel", ".to_delete");
+        function removeBySelector() {
+            owlCarousel.trigger("removeBySelector.owl.carousel", ".to_remove");
         }
-        function deleteByNotHavingSelector() {
-            owlCarousel.trigger("removeByNotHavingSelector.owl.carousel", ".to_delete");
+        function removeByNotHavingSelector() {
+            owlCarousel.trigger("removeByNotHavingSelector.owl.carousel", ".to_remove");
         }
         </script>
 
@@ -59,19 +59,19 @@
     </head>
     <body>
         <div class="owl-carousel owl-theme">
-            <div class="item to_delete">
+            <div class="item to_remove">
               <h4>1</h4>
             </div>
             <div class="item">
               <h4>2</h4>
             </div>
-            <div class="item to_delete">
+            <div class="item to_remove">
               <h4>3</h4>
             </div>
             <div class="item">
               <h4>4</h4>
             </div>
-            <div class="item to_delete">
+            <div class="item to_remove">
               <h4>5</h4>
             </div>
             <div class="item">
@@ -80,7 +80,7 @@
             <div class="item">
               <h4>7</h4>
             </div>
-            <div class="item to_delete">
+            <div class="item to_remove">
               <h4>8</h4>
             </div>
             <div class="item">
@@ -89,7 +89,7 @@
             <div class="item">
               <h4>10</h4>
             </div>
-            <div class="item to_delete">
+            <div class="item to_remove">
               <h4>11</h4>
             </div>
             <div class="item">
@@ -101,9 +101,9 @@
             <button onclick="RestoreCollection()">Restore Collection</button>
         </div>
         <div>
-            <button onclick="DeleteAll()">Delete All</button>
-            <button onclick="deleteBySelector()">Delete All With class "to_delete"</button>
-            <button onclick="deleteByNotHavingSelector()">Delete All Without class "to_delete"</button>
+            <button onclick="RemoveeAll()">Remove All</button>
+            <button onclick="removeBySelector()">Remove All With class "to_remove"</button>
+            <button onclick="removeByNotHavingSelector()">Remove All Without class "to_remove"</button>
         </div>
     </body>
 </html>
