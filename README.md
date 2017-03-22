@@ -7,7 +7,7 @@ This plugin is dedicated to item management (delete, store and restore) in
 
 ## Why?
 
-This plugin was criated by the need to filter items in carousel.
+This plugin was created by the need to filter items in carousel.
 
 By default, the owlcarousel2 has a limited range of operations available
 to add, remove and restore items.
