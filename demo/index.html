@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+        <script src="../owl.item-manipulator.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css" />
+
+        <script>
+
+        $(function() {
+            owlCarousel = $(".owl-carousel").owlCarousel({
+                margin: 10,
+                owlItemManipulator:true,
+                responsive: {
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:3
+                    },
+                    1000:{
+                        items:5
+                    }
+                }
+            });
+
+        });
+
+
+        function Collect() {
+            owlCarousel.trigger("collect.owl.carousel");
+        }
+        function RestoreCollection() {
+            owlCarousel.trigger("restoreCollection.owl.carousel");
+        }
+        function DeleteAll() {
+            owlCarousel.trigger("removeAll.owl.carousel");
+        }
+        function deleteBySelector() {
+            owlCarousel.trigger("removeBySelector.owl.carousel", ".to_delete");
+        }
+        function deleteByNotHavingSelector() {
+            owlCarousel.trigger("removeByNotHavingSelector.owl.carousel", ".to_delete");
+        }
+        </script>
+
+        <style>
+        .owl-carousel .item {
+            height: 10rem;
+            background: #4DC7A0;
+            padding: 1rem;
+            font-size: 40px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="owl-carousel owl-theme">
+            <div class="item to_delete">
+              <h4>1</h4>
+            </div>
+            <div class="item">
+              <h4>2</h4>
+            </div>
+            <div class="item to_delete">
+              <h4>3</h4>
+            </div>
+            <div class="item">
+              <h4>4</h4>
+            </div>
+            <div class="item to_delete">
+              <h4>5</h4>
+            </div>
+            <div class="item">
+                <h4>6</h4>
+            </div>
+            <div class="item">
+              <h4>7</h4>
+            </div>
+            <div class="item to_delete">
+              <h4>8</h4>
+            </div>
+            <div class="item">
+              <h4>9</h4>
+            </div>
+            <div class="item">
+              <h4>10</h4>
+            </div>
+            <div class="item to_delete">
+              <h4>11</h4>
+            </div>
+            <div class="item">
+              <h4>12</h4>
+            </div>
+        </div>
+        <div>
+            <button onclick="Collect()">Collect</button>
+            <button onclick="RestoreCollection()">Restore Collection</button>
+        </div>
+        <div>
+            <button onclick="DeleteAll()">Delete All</button>
+            <button onclick="deleteBySelector()">Delete All With class "to_delete"</button>
+            <button onclick="deleteByNotHavingSelector()">Delete All Without class "to_delete"</button>
+        </div>
+    </body>
+</html>
